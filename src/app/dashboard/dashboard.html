@@ -1,1 +1,27 @@
-<p>dashboard works!</p>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <h1>DASHBOARD</h1>
+        </div>
+    </div>
+</nav>
+
+<!-- Teacher Profile Card to redirect  -->
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Teacher Profile</h5>
+        <p class="card-text">Total Teachers: {{teacherLength}}</p>
+        <a routerLink="/teacherprofile" class="btn btn-primary stretched-link">Teacher Profile</a>
+    </div>
+</div>
+
+<!-- Student Profile Card to redirect  -->
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Student Profile</h5>
+        <p class="card-text">Total Students: {{studLength}}</p>
+        <a routerLink="/studentprofile/studentprofile" class="btn btn-primary stretched-link">Student Profile</a>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

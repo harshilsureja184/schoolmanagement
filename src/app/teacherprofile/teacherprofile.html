@@ -1,1 +1,9 @@
-<p>teacherprofile works!</p>
+<button type="button" class="btn btn-primary" (click)="editTeacher = null" data-bs-toggle="modal" data-bs-target="#detailsModal">
+  Add Details
+</button>
+(
+<app-forms [editData]="editTeacher" (clear)="clear()" (adds)="onTeacherAdded($event)" (update)="onTeacherUpdated($event)">
+</app-forms>
+
+<app-datatables [data]="teacherList" (edit)="onEditRequest($event)" (delete)="onDelete($event)">
+</app-datatables>

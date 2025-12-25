@@ -1,1 +1,17 @@
-<p>studentprofile works!</p>
+<!-- Add Details Button -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailsModal"
+        routerLink="/dashboard">
+        Back to Home
+    </button>
+
+<app-forms
+  [editData]="formcomp1"
+  (adds)="onStudentAdded($event)"
+  (update)="onStudentUpdated($event)"
+></app-forms>
+
+<app-datatables
+  [data]="studentList"
+  (edit)="onEditRequest($event)"
+  (delete)="onDelete($event)">
+</app-datatables>
